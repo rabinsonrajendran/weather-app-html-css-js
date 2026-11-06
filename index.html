@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Weather App</h1>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+
+            <button id="searchBtn" type="button">
+                Search
+            </button>
+        </div>
+
+        <!-- Unit Toggle -->
+        <div class="toggle-container">
+            <button id="unitToggle" type="button">
+                Switch to °F
+            </button>
+        </div>
+
+        <!-- Search History -->
+        <div
+            id="searchHistory"
+            class="history"
+        ></div>
+
+        <!-- Loading Indicator -->
+        <div
+            id="spinner"
+            class="spinner hidden"
+        ></div>
+
+        <!-- Empty State -->
+        <div
+            id="emptyState"
+            class="empty-state"
+        >
+            Search for a city to view weather information.
+        </div>
+
+        <!-- Error Message -->
+        <p
+            id="errorMessage"
+            class="error"
+            role="alert"
+        ></p>
+
+        <!-- Current Weather -->
+        <div
+            id="weatherCard"
+            class="weather-card hidden"
+        >
+
+            <h2 id="cityName"></h2>
+
+            <img
+                id="weatherIcon"
+                src=""
+                alt=""
+            >
+
+            <h3 id="temperature"></h3>
+
+            <p id="condition"></p>
+
+            <div class="details">
+
+                <p>
+                    Humidity:
+                    <span id="humidity"></span>%
+                </p>
+
+                <p>
+                    Wind Speed:
+                    <span id="windSpeed"></span>
+                </p>
+
+                <p>
+                    Feels Like:
+                    <span id="feelsLike"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Forecast -->
+        <div
+            id="forecastSection"
+            class="forecast hidden"
+        >
+
+            <h2>3-Day Forecast</h2>
+
+            <div
+                id="forecastCards"
+                class="forecast-cards"
+            ></div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+
+</html>
